@@ -1,3 +1,10 @@
 <%- include('Layout/LayoutHeader.ejs') %>
-<h1>Home</h1>
+<div class="container">
+    <%- include("Fragment/Home/TopCorner.ejs") %>
+    <div class="main_chat">
+        <%- include("Fragment/Home/LeftCorner.ejs") %>
+        <%- include("Fragment/Home/RightCorner.ejs") %>
+
+    </div>
+</div>
 <%- include('Layout/LayoutFooter.ejs') %>

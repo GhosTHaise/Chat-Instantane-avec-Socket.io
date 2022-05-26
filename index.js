@@ -14,7 +14,8 @@ app.use(body_parser.urlencoded());
 app.set("view engine","ejs");
 app.set("views","./src/Views")
 //Mes imports
-app.use("/icon",express.static("./src/Views/Assets/Icon"))
+app.use("/icon",express.static("./src/Views/Assets/Icon"));
+app.use("/style",express.static("./src/Views/Assets/Styles"));
 //
 //Mes Routes
 app.use("/",require('./src/Router/Home'));
