@@ -7,6 +7,10 @@
         var text = document.getElementById("message").value;
         socket.emit('chat message',text);
     }
+    const receive = () =>{
+        
+    }
+    socket.on("chat message",receive)
 </script>
 <div class="container">
     <%- include("Fragment/Home/TopCorner.ejs") %>
