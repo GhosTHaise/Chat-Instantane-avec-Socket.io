@@ -1,4 +1,13 @@
 <%- include('Layout/LayoutHeader.ejs') %>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io();
+
+    const send = () =>{
+        var text = document.getElementById("message").value;
+        socket.emit('chat message',text);
+    }
+</script>
 <div class="container">
     <%- include("Fragment/Home/TopCorner.ejs") %>
     <div class="main_chat">
