@@ -1,7 +1,7 @@
 //Initialiser le server
 const express = require("express"),
       body_parser = require("body-parser"),
-      io = require("socket.io"),
+      io = require("socket.io")(http),
       PORT  = process.env.PORT || 5050,
       app = new express();
 //
@@ -20,7 +20,17 @@ app.use("/style",express.static("./src/Views/Assets/Styles"));
 //Mes Routes
 app.use("/",require('./src/Router/Home'));
 //
-
+//Socket io
+io.on("connection",(socket)=>{
+    console,log("You are connected !");
+    socket.on("disconnect",()=>{
+        console.log("You are disconnected !")
+    });
+    socket.on("chat message",(msg)=>{
+        console.log(`message recu ${msg}`);
+    })
+})
+//
 app.listen(PORT,() =>{
     console.log(`Your app is start on http://localhost:${PORT}`);
 })

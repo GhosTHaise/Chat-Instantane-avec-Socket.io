@@ -44,11 +44,12 @@ html,body{
     justify-content: space-between;
 }
 .rightcorner .current_chating,.rightcorner .zone_saisie{
-    height: 13%;
+    height: 50px;
     width: 100%;
 }
 .rightcorner .zone_messsage{
-    height: calc(calc(100% - calc(13%*2)) - 20px);
+    overflow-y: scroll;
+    height: calc(calc(100% - calc(50px * 2)) - 20px);
 }
 
 /* left corner */
