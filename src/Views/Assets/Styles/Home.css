@@ -14,7 +14,7 @@ html,body{
 .container{
     width: 100%;
     height: 100%;
-    padding: 20px 40px;
+    padding: 2% 5%;
     display: flex;
     flex-direction: column;
 }
@@ -23,12 +23,16 @@ html,body{
     justify-content: space-between;
     height: 90%;
 }
-.leftcorner,.rightcorner{
+.leftcorner{
     width: 45%;
+    padding-right: 20px;
+}
+.rightcorner{
+    width: 50%;
 }
 /* top_corner */
-.top_coner{
-    height: 10%;
+.top_corner{
+    margin-bottom: 25px;
 }
 .top_corner p{
     font-size: .52rem;
@@ -78,3 +82,23 @@ html,body{
 
 /* left corner */
 
+.leftcorner .searchBar{
+    height: 8%;
+    min-height: 50px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 0 25px;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.leftcorner .searchBar input{
+    font-size: .5rem;
+    outline: none;
+    color: #c4c4c4;
+    border: none;
+}
+.leftcorner .searchBar .search_btn{
+    color: #c4c4c4;
+    font-size: .75rem;
+}

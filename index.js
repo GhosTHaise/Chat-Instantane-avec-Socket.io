@@ -17,6 +17,7 @@ app.set("views","./src/Views")
 //Mes imports
 app.use("/icon",express.static("./src/Views/Assets/Icon"));
 app.use("/style",express.static("./src/Views/Assets/Styles"));
+app.use("/script",express.static("./src/Views/Assets/Scripts"))
 //
 //Mes Routes
 app.use("/",require('./src/Router/Home'));
