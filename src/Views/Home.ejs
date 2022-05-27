@@ -1,14 +1,17 @@
 <%- include('Layout/LayoutHeader.ejs') %>
 <script src="/socket.io/socket.io.js"></script>
 <script>
+    //CLient
     var socket = io();
 
     const send = () =>{
         var text = document.getElementById("message").value;
         socket.emit('chat message',text);
     }
-    const receive = () =>{
-        
+    const receive = (msg) =>{
+        var li = document.createElement('li');
+        li.innerText = msg;
+        document.getElementById("message_zone").appendChild(li);
     }
     socket.on("chat message",receive)
 </script>
