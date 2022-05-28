@@ -76,10 +76,60 @@ html,body{
     background-color: rgba(245, 245, 245, 0.87);
     border-radius: 10px;
 }
-.rightcorner .zone_messsage{
-    
+.rightcorner  .zone_saisie{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chat_mes,.chat_vocal,.chat_btn{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chat_mes{
+    width: calc(100% - calc(150px + 50px));
+}
+.chat_vocal{
+    width: 50px;
+}
+.chat_btn{
+    padding-right: 10px;
+    width: 125px;
+    justify-content: space-around;
+
 }
 
+/* Icon */
+.chat_icon{
+    font-size: .8rem;
+    color: #ad7cb8;
+    cursor: pointer;
+}
+.chat_icon_btn_section{
+    color: #6e6e6e8c;
+}
+.extend_btn{
+    display: flex;
+    align-items: center;
+}
+.chat_icon_send{
+    padding: 9px;
+    width: 35px  !important;
+    height: 35px !important;
+    color: white;
+    border-radius: 50px;
+    background: linear-gradient(to right bottom, #e78afc, #d570ea, #c355d8, #b236c6, #a003b4);
+}
+.chat_mes input {
+    outline: none;
+    font-size: .47rem;
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding : 5px 10px;
+    color: #4e4e4e;
+}
 /* left corner */
 
 .leftcorner .searchBar{
@@ -95,10 +145,11 @@ html,body{
 .leftcorner .searchBar input{
     font-size: .5rem;
     outline: none;
-    color: #c4c4c4;
+    color: #b1afaf;
     border: none;
 }
 .leftcorner .searchBar .search_btn{
     color: #c4c4c4;
     font-size: .75rem;
+    cursor: pointer;
 }

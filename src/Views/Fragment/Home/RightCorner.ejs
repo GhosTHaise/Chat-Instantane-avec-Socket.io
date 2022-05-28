@@ -7,8 +7,17 @@
             <ul id="message_zone" class="message_zone"></ul>
         </div>
         <div class="zone_saisie">
-            <input type="text" name="message" id="message">
-            <button onclick="send()">Envoyer</button>
+            <div class="chat_vocal">
+                <i class="chat_icon fas fa-microphone"></i>
+            </div>
+            <div class="chat_mes">
+                <input type="text" name="message" id="message" placeholder="Type Something ...">
+            </div>
+        <div class="chat_btn">
+            <span><i class="chat_icon chat_icon_btn_section far fa-smile-wink"></i></span>
+            <span ><i class="chat_icon chat_icon_btn_section far fa-file"></i></span>
+            <span class="extend_btn" onclick="send()"><i class="chat_icon chat_icon_send fa fa-paper-plane"></i></span>
+        </div>
         </div>
     </div>
 </div>
