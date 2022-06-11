@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 html{
     font-size: 32px;
     background-color: rgb(236, 235, 235);
+    font-family: 'Questrial', sans-serif;
 }
 html,body{
     width: 100%;
@@ -102,7 +104,7 @@ html,body{
 
 /* Icon */
 .chat_icon{
-    font-size: .8rem;
+    font-size: .75rem;
     color: #ad7cb8;
     cursor: pointer;
 }
@@ -144,6 +146,8 @@ html,body{
 }
 .leftcorner .searchBar input{
     font-size: .5rem;
+    width: 100%;
+    padding-right: 15px;
     outline: none;
     color: #b1afaf;
     border: none;

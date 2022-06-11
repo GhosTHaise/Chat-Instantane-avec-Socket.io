@@ -3,7 +3,7 @@
 <script>
     //CLient
     var socket = io();
-
+    //message function
     const send = () =>{
         var text = document.getElementById("message").value;
         socket.emit('chat message',text);
@@ -14,6 +14,10 @@
         document.getElementById("message_zone").appendChild(li);
     }
     socket.on("chat message",receive)
+    //
+    //status function
+    socket.on("connect", updateStatus());
+    //
 </script>
 <div class="container">
     <%- include("Fragment/Home/TopCorner.ejs") %>
