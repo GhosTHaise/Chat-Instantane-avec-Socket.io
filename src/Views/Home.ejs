@@ -16,8 +16,13 @@
     socket.on("chat message",receive)
     //
     //status function
-    socket.on("connect", updateStatus());
+   // socket.on("connect", updateStatus());
     //
+    document.addEventListener("keydown",(e)=>{
+        if(e.keyCode == 13){
+            send();
+        }
+    });
 </script>
 <div class="container">
     <%- include("Fragment/Home/TopCorner.ejs") %>
