@@ -24,9 +24,11 @@ app.use("/",require('./src/Router/Home'));
 //
 //Socket io
 io.on("connection",(socket)=>{
-    console.log("You are connected !");
+    let status = "connected"
+    socket.emit("__Status__",status);
     socket.on("disconnect",()=>{
-        console.log("You are disconnected !")
+        status = "disconnected"
+        socket.emit("__Status__",status);
     });
     socket.on("chat message",(msg)=>{
         console.log(`message recu : ${msg}`);

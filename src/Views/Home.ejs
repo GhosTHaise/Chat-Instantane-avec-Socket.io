@@ -16,7 +16,15 @@
     socket.on("chat message",receive)
     //
     //status function
-   // socket.on("connect", updateStatus());
+    socket.on("__Status__",(_status)=>{
+        updateStatus(_status);
+    })
+    const updateStatus = (_status) => {
+        const status_constainer = document.getElementById("status");
+        status_constainer.style.color = "#d46fe9";
+        status_constainer.innerHTML= _status;
+    }
+    // socket.on("connect", updateStatus());
     //
     document.addEventListener("keydown",(e)=>{
         if(e.keyCode == 13){
