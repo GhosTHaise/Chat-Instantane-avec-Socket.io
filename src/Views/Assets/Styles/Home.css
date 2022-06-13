@@ -143,21 +143,36 @@ html,body{
     display: flex;
     flex-direction: column;
     justify-content: start;
+    margin-bottom: 25px;
+}
+.zone_messsage .msg_receive{
+    align-items: flex-start;
+}
+.zone_messsage .msg_sender{
+    align-items: end;
+}
+.zone_messsage ul ._msg_rcv_com {
+    line-height: .8rem;
+    padding: 10px 15px;
+    font-size: .45em;
 }
 .zone_messsage ul .message_received_{
-    width: 80%;
-    line-height: .8rem;
-    padding: 15px 15px;
+    max-width: 80%;
     background-color: #e0e0e071;
     border-radius: 15px 15px 15px 0px;
-    font-size: .45em;
     color: #8f8f8fdc;
+}
+.zone_messsage ul .message_received_sender{
+    max-width: 85%;
+    background-color: #a809bd;
+
+    border-radius: 15px 15px 0px 15px;
+    color: white;
 }
 .zone_messsage ul li .message_received_time{
     letter-spacing: .5px;
     color: #a3a3a3e3;
     margin-top: 10px;
-    margin-bottom: 25x;
     font-size: .4rem;
 }
 /* Icon */
