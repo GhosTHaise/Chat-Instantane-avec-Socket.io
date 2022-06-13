@@ -7,11 +7,18 @@
     const send = () =>{
         var text = document.getElementById("message").value;
         socket.emit('chat message',text);
+        document.getElementById("message").value = "";
     }
     const receive = (msg) =>{
-        var li = document.createElement('li');
-        li.innerText = msg;
-        document.getElementById("message_zone").appendChild(li);
+        //changer plutard en node element
+        var li_content = `<li class="msg_sender">
+                            <div class="_msg_rcv_com message_received_sender">
+                                <p>${msg}</p>
+                            </div>
+                            <span class="message_received_time">3:25 PM</span>
+                          </li>` ;
+
+        document.getElementById("message_zone").innerHTML += li_content;
     }
     socket.on("chat message",receive)
     //
