@@ -128,7 +128,38 @@ html,body{
     justify-content: space-around;
 
 }
-
+.zone_messsage {
+    height: 80%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+.zone_messsage ul{
+    list-style-type: none;
+    height: 100%;
+    width: 100%;
+}
+.zone_messsage ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.zone_messsage ul .message_received_{
+    width: 80%;
+    line-height: .8rem;
+    padding: 15px 15px;
+    background-color: #e0e0e071;
+    border-radius: 15px 15px 15px 0px;
+    font-size: .45em;
+    color: #8f8f8fdc;
+}
+.zone_messsage ul li .message_received_time{
+    letter-spacing: .5px;
+    color: #a3a3a3e3;
+    margin-top: 10px;
+    margin-bottom: 25x;
+    font-size: .4rem;
+}
 /* Icon */
 .chat_icon{
     font-size: .75rem;
