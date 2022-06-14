@@ -4,23 +4,47 @@
     //CLient
     var socket = io();
     //message function
+    //message sender
+    const displayMessageSent = (_msg_) => {
+        var li_content = `<li class="msg_sender">
+                            <div class="_msg_rcv_com message_received_sender">
+                                <p>${_msg_}</p>
+                            </div>
+                            <span class="message_received_time">${formatDate()}</span>
+                          </li>` ;
+        document.getElementById("message_zone").innerHTML += li_content;                  
+    }
+    //end
+    //message receiver
+    const displayMessageReceived = (_msg_) => {
+        var li_content = `<li class="msg_receive">
+                            <div class="_msg_rcv_com message_received_">
+                               <p>${_msg_}</p>
+                            </div>
+                            <span class="message_received_time">${formatDate()}</span>
+                          </li>`;
+        document.getElementById("message_zone").innerHTML += li_content;                   
+    }
+    //end
+    //Date function
+    const formatDate = () => {
+        const date = new Date();
+        return date.toLocaleString("en-US",{hour : "numeric",minute : "numeric",hour12:true});
+    }
+    //end
     const send = () =>{
         var text = document.getElementById("message").value;
+        displayMessageSent(text);
         socket.emit('chat message',text);
         document.getElementById("message").value = "";
     }
-    const receive = (msg) =>{
+    const receive = (msg_received,sender_id) =>{
         //changer plutard en node element
-        var li_content = `<li class="msg_sender">
-                            <div class="_msg_rcv_com message_received_sender">
-                                <p>${msg}</p>
-                            </div>
-                            <span class="message_received_time">3:25 PM</span>
-                          </li>` ;
-
-        document.getElementById("message_zone").innerHTML += li_content;
+        if(sender_id != socket.id){
+            displayMessageReceived(msg_received);
+        }
     }
-    socket.on("chat message",receive)
+    socket.on("chat message",receive);
     //
     //status function
     socket.on("__Status__",(_status)=>{

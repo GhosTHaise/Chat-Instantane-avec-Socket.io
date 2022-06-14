@@ -22,6 +22,7 @@ app.use("/script",express.static("./src/Views/Assets/Scripts"))
 //Mes Routes
 app.use("/",require('./src/Router/Home'));
 //
+
 //Socket io
 io.on("connection",(socket)=>{
     let status = "connected"
@@ -32,7 +33,7 @@ io.on("connection",(socket)=>{
     });
     socket.on("chat message",(msg)=>{
         console.log(`message recu : ${msg}`);
-        io.emit("chat message",msg)
+        io.emit("chat message",msg,socket.id)
     })
 })
 //
