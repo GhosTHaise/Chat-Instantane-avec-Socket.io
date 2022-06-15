@@ -28,6 +28,9 @@ html,body{
 .leftcorner{
     width: 45%;
     padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .rightcorner{
     width: 50%;
@@ -54,19 +57,19 @@ html,body{
     flex-direction: column;
     justify-content: space-between;
 }
-.rightcorner .current_chating,.rightcorner .zone_saisie{
-    height: 13%;
+.rightcorner .current_chating,.rightcorner .zone_saisie,.connected-chat{
+    height: 12%;
     min-height: 65px;
     width: 100%;
     background-color: white;
     border-radius: 15px;
 }
-.rightcorner .current_chating{
+.rightcorner .current_chating,.connected-chat{
     padding: 5px 15px;
     display: flex;
     align-items: center;
 }
-.rightcorner .current_chating .current_chating_img{
+.rightcorner .current_chating .current_chating_img,.connected-chat .connected-chat_img{
     object-fit: contain;
     height: 80%;
     width: auto;
@@ -74,7 +77,7 @@ html,body{
     box-shadow: 0px 0px 8px #979797a1;
     margin-right: 15px;
 }
-.rightcorner .current_chating .current_chating_text{
+.rightcorner .current_chating .current_chating_text,.connected-chat .connected-chat_text{
     width: 80%;
     font-size: .45rem;
     letter-spacing: -.1px;
@@ -82,11 +85,13 @@ html,body{
     padding-right: 10px;
     overflow: hidden;
 }
-.rightcorner .current_chating .current_chating_text h4{
+.rightcorner .current_chating .current_chating_text h4,.connected-chat .connected-chat_text h4{
     font-size: .55rem;
+    font-weight: 500;
 }
-.rightcorner .current_chating .current_chating_text p{
+.rightcorner .current_chating .current_chating_text p,.connected-chat .connected-chat_text p{
     color: #979797e1;
+    font-weight: 400;
 }
 .rightcorner .zone_saisie{
     width: calc(100% - calc(20px * 2));
@@ -134,7 +139,9 @@ html,body{
     overflow-x: hidden;
     scrollbar-width: none;
 }
-.zone_messsage ul{
+
+.zone_messsage ul,.Contact ul{
+    position: relative;
     list-style-type: none;
     height: 100%;
     width: 100%;
@@ -233,4 +240,23 @@ html,body{
 }
 .leftcorner .searchBar .search_btn:hover{
     color: #ad7cb8;
+}
+.leftcorner .Contact{
+    height: calc(95% - 45px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    min-height: 300px;
+    padding-top: 10px;
+}
+.leftcorner .Contact .connected-chat {
+    height: 15%;
+    margin-bottom: 20px;
+}
+.leftcorner .Contact  .connected-chat_current{
+    transform: scale(1.2);
+    position: absolute;
+}
+.leftcorner .Contact .connected-chat .connected-chat_text h4 {
+    font-size: .50rem;
 }

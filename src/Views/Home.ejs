@@ -11,7 +11,7 @@
                                 <p>${_msg_}</p>
                             </div>
                             <span class="message_received_time">${formatDate()}</span>
-                          </li>` ;
+                          </li>`;
         document.getElementById("message_zone").innerHTML += li_content;                  
     }
     //end
@@ -34,7 +34,7 @@
     //end
     const send = () =>{
         var text = document.getElementById("message").value;
-        displayMessageSent(text);
+        displayMessageSent(text);   
         socket.emit('chat message',text);
         document.getElementById("message").value = "";
     }
