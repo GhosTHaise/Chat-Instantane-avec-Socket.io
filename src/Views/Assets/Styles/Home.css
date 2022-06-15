@@ -27,6 +27,7 @@ html,body{
 }
 .leftcorner{
     width: 45%;
+    overflow: visible;
     padding-right: 20px;
     display: flex;
     flex-direction: column;
@@ -83,7 +84,6 @@ html,body{
     letter-spacing: -.1px;
     min-width: 210px;
     padding-right: 10px;
-    overflow: hidden;
 }
 .rightcorner .current_chating .current_chating_text h4,.connected-chat .connected-chat_text h4{
     font-size: .55rem;
@@ -141,7 +141,6 @@ html,body{
 }
 
 .zone_messsage ul,.Contact ul{
-    position: relative;
     list-style-type: none;
     height: 100%;
     width: 100%;
@@ -243,8 +242,8 @@ html,body{
 }
 .leftcorner .Contact{
     height: calc(95% - 45px);
-    overflow-x: hidden;
     overflow-y: scroll;
+    overflow: visible;
     scrollbar-width: none;
     min-height: 300px;
     padding-top: 10px;
@@ -254,8 +253,8 @@ html,body{
     margin-bottom: 20px;
 }
 .leftcorner .Contact  .connected-chat_current{
-    transform: scale(1.2);
-    position: absolute;
+    transform: scale(1.1);
+    box-shadow: 0px 1px 10px #afafaf7a;
 }
 .leftcorner .Contact .connected-chat .connected-chat_text h4 {
     font-size: .50rem;
