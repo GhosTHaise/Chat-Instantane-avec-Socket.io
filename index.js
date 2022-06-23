@@ -22,6 +22,7 @@ app.use("/script",express.static("./src/Views/Assets/Scripts"))
 //
 //Mes Routes
 app.use("/",require('./src/Router/Home'));
+app.use("/",require("./src/Router/Login"));
 //
 
 //Socket io
