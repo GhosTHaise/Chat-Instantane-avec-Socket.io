@@ -23,6 +23,12 @@ app.use("/script",express.static("./src/Views/Assets/Scripts"))
 //Mes Routes
 app.use("/",require('./src/Router/Home'));
 app.use("/",require("./src/Router/Login"));
+//-> Gestion d'erreur <-//
+app.use((req,res)=>{
+    res.status(404).render("404Error.ejs",{
+
+    });
+})
 //
 
 //Socket io
