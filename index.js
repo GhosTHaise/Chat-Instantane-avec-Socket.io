@@ -5,12 +5,14 @@ const express = require("express"),
       app = new express(),
       cookieParser = require("cookie-parser"),
       http = require('http').Server(app),
+      multer = require("multer"),
       io = require("socket.io")(http);
 //
 //Middleware
 app.use(express.json());
 app.use(body_parser.json());
 app.use(body_parser.urlencoded());
+app.use(multer().array());
 //parser le cookies des requete HTTP;
 app.use(cookieParser());
 //
