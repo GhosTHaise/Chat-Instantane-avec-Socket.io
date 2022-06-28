@@ -1,12 +1,12 @@
 <div class="login_content">
     <% if (locals.message) { %> 
-        <h4><%= message  %> </h4>
+        <h4 style="position: absolute;top: 0;"><%= message  %> </h4>
     <% } %> 
-    <form action="/login_validate" method="post">
+    <form class login_forms action="/login_validate" method="post">
         <label for="username">Email</label>
-        <input type="text" name="username" id="username">
+        <input type="text" name="username" id="username" placeholder="Enter email">
         <label for="password">Password</label>
-        <input type="text" name="password" id="password">
+        <input type="text" name="password" id="password" placeholder="Enter password">
         <button type="submit">Login </button>
         
     </form>
