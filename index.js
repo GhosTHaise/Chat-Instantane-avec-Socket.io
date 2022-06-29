@@ -26,17 +26,9 @@ app.use("/style",express.static("./src/Views/Assets/Styles"));
 app.use("/script",express.static("./src/Views/Assets/Scripts"))
 //
 //Mes Routes
-/*Injection d'utilisateur*/
-app.use((req,res,next)=>{
-    //Recuperer les donnees dans les cookies
-    const authToken = req.cookies['AuthToken'];
-    //Injecter l'utilisateur dans les requetes
-    console.log(authToken);
-    req.user = authToken;
-    next()
-})
 
-/* app.use("/",require('./src/Router/Home')); */
+
+app.use("/",require('./src/Router/Home'));
 app.use("/",require("./src/Router/Login"));
 //-> Gestion d'erreur <-//
 app.use((req,res)=>{
