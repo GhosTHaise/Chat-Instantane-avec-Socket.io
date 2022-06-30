@@ -25,7 +25,6 @@ const actuel_timestamp = (date = Date.now()) => {
 }
 //Generer JWt token
 const jwtSign = (email) => {
-    console.log(actuel_timestamp());
     return jwt.sign({
         //Obligatoire
         iat : actuel_timestamp(),
@@ -66,8 +65,14 @@ const LoginValidate = (req,res) => {
         res.redirect("/"); 
     });
 }
+//LogOut function
+const LogOut = (req,res) => {
+    res.clearCookie();
+    res.redirect("/");
+}
 
 module.exports = {
     LoginView,
-    LoginValidate
+    LoginValidate,
+    LogOut
 }

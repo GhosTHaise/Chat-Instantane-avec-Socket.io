@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken"),
       {JWT_KEY} = process.env;
 //jwt verification
 
-const jwtVerify = (cookies) =>{
+const jwtVerify = (cookies,recuperation) =>{
     if(typeof cookies == "undefined"){
         return false;
     }
@@ -11,6 +11,7 @@ const jwtVerify = (cookies) =>{
         const decoded = jwt.verify(cookies.JWT,JWT_KEY);
         //traaitement necessaire
         console.log(decoded);
+        recuperation = decoded.jti;
         return true;
     }catch(err){
         console.log("Erreur innatendu : "+err);
