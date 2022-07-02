@@ -1,0 +1,51 @@
+.login_container{
+    width: 100%;
+    height: 100%;
+}
+.login_content{
+    width: 50%;
+    height: 100%;
+    display: grid;
+   
+    form{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 50px;
+        color: white;
+
+        label{
+            font-size: .85rem;
+            margin-bottom: 15px;
+        }
+        %input_button{
+            width: 350px;
+            height: 50px;
+            margin-bottom: 25px;
+            outline: none;
+            font-size: .55rem;
+            color: white;
+            transition: all .4s ease-in-out 0s;
+        }
+        input{
+            @extend %input_button;
+            padding: 0 15px;
+            background-color: transparent;
+            border: 1px solid white;
+        }
+        button{
+            @extend %input_button;
+            background-color: white;
+            border:none;
+            color: #ff9999;
+            cursor: pointer;
+            &:hover{
+                background-color: transparent;
+                border:1px solid white;
+                color: white;
+            }
+        }
+    }
+}

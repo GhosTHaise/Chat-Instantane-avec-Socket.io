@@ -11,7 +11,10 @@ const jwtVerify = (cookies,recuperation) =>{
         const decoded = jwt.verify(cookies.JWT,JWT_KEY);
         //traaitement necessaire
         console.log(decoded);
-        recuperation = decoded.jti;
+        recuperation = {
+                            jti : decoded.jti,
+                            data : decoded.data
+                        };
         return true;
     }catch(err){
         console.log("Erreur innatendu : "+err);

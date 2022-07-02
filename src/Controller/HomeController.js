@@ -3,10 +3,11 @@ const fetch = require("node-fetch");
 const updateStatus = () =>{
     document.getElementById("status").innerHTML("actif");
 }
-const LogOut_User = () => {
-    fetch("http://localhost:5050/log-out-user",{method : "POST"}).then((res)=>{
-        /* alert("You are now disconnected !") */
-    });
+const LogOut_User = (res) => {
+    /* fetch("http://localhost:5050/log-out-user",{method : "POST"}).then((res)=>{
+        
+        
+    }); */
 }
 const HomeView = (req,res) => {
     console.log(req.cookies);
